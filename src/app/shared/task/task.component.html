@@ -1,0 +1,32 @@
+<mat-card class="task-card">
+    <div class="card-container">
+      <div class="icon">
+        <mat-icon class="task-icon" aria-hidden="false" aria-label="Example home icon">unknown_document</mat-icon>
+      </div>
+      <div class="card-content">
+        <div class="infos">
+          <div class="title">
+            Demande d'autorisation de travaux
+          </div>
+          <div class="project">
+            {{ task.project }}
+          </div>
+          <div class="chips">
+            <mat-chip>{{ task.user }}</mat-chip>
+            <mat-chip>Contrat {{ task.contract ? task.contract : 'Non renseigné' }}</mat-chip>
+          </div>
+        </div>
+        <div class="cta">
+          <div class="status" [ngClass]="{'pending': !task.completed, 'done': task.completed}">{{ task.completed ? 'Done' : 'Pending' }}</div>
+          <mat-icon aria-hidden="false" aria-label="Example home icon" [matMenuTriggerFor]="menu">more_vert</mat-icon>
+            <mat-menu #menu="matMenu">
+                @if(!task.completed) {
+                    <button mat-menu-item (click)="sendAction('DONE', task)">Mark as Done</button>
+                    <button mat-menu-item (click)="sendAction('EDIT', task)">Edit this task</button>
+                }
+                <button mat-menu-item (click)="sendAction('DELETE', task)">Delete Task</button>
+            </mat-menu>
+        </div>
+      </div>
+    </div>
+  </mat-card>

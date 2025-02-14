@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    h1 {
+        font-size: 28px;
+        font-weight: 400;
+    }
+    
+    h2 {
+        font-size: 17px;
+        font-weight: 200;
+    }
+
+    button {
+        padding: .5rem 1rem .5rem 1rem;
+    }
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 13rem 0 13rem;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    button {
+        display: flex;
+        align-items: center;
+        background-color: var(--primary-600);
+        border-radius: 10px;
+        border: none;
+        color: white;
+    }
+}

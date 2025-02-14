@@ -1,0 +1,67 @@
+
+.task-card {
+    background-color: white;
+    box-shadow: 10px 5px 5px #4B556505;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    margin-bottom: 1rem;
+}
+
+.card-container {
+    display: flex;
+
+    .task-icon {
+        margin: 1rem;
+        padding: 1rem;
+        text-align: center;
+        align-items: center;
+        background-color: var(--task-icon-bg-color);
+        color: var(--task-icon-color);
+        border-radius: 50%;
+    }
+
+    .card-content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .infos {
+            margin: 1rem;
+        }
+
+        .project {
+            font-weight: bold;
+        }
+
+        .chips {
+            display: flex;
+            margin: 1rem 0 1rem 0;
+
+            mat-chip {
+                margin-right: .5rem;
+            }
+        }
+
+        .cta {
+            padding: 0 2rem 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            min-width: 10%;
+            align-items: center;
+
+            .status {
+                padding: .5rem 1rem .5rem 1rem;
+                border-radius: 14px;
+                &.pending {
+                    background-color: #FEF0C7;
+                    color: darken(#FEF0C7, 50%);
+                }
+
+                &.done {
+                    background-color: #d7fec7;
+                    color: darken(#d7fec7, 50%);
+                }
+            }
+        }
+    }
+}

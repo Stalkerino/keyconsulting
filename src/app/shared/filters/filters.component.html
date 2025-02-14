@@ -1,0 +1,7 @@
+<div class="card">
+    <h3>Current filter : {{ currentFilter }} </h3>
+    <button class="primary" (click)="setFilter('ALL')">ALL</button>
+    <button class="success" (click)="setFilter('COMPLETED')">COMPLETED</button>
+    <button class="error" (click)="setFilter('UNFINISHED')">UNFINISHED</button>
+    <input type="text" (input)="updateSearchText($event)" placeholder="Search a task by title" />
+</div>
